@@ -8,7 +8,8 @@ var groundObj
 var trash
 var leftSide
 var radius = 40
-
+var engine
+var world
 
 function preload(){
 
@@ -32,7 +33,8 @@ function setup() {
 groundObj = new Ground(width/2,670,width,20)
 leftSide = new Ground(1100,600,20,120)
 rightSide = new Ground(900,600,20,120)
-trash = Matter.Bodies.circle(9,655,radius/2,trash_options)
+trash = Bodies.circle(9,655,radius/2,trash_options)
+World.add(world,trash)
 
 Engine.run(engine);
   
